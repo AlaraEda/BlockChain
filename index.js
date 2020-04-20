@@ -1,6 +1,6 @@
 
 //My Code
-let string = "tex";
+let string = "text";
 var theCode ="";
 let output = []
 
@@ -29,27 +29,26 @@ if (output.length < 10){
     console.log("Lengte van de output:", output.length)
     console.log("Vul reeks aan tot het bestaat uit 10 gehele getallen.")
 
-    //Vul reeks aan met getallen.
-    //Stop met aanvullen als output.length == 10
-    //Vul array aan met output.push(+sCodes.charAt(o));
-
-
-    let extraCijfers = '';
-    for (let aanvullen = 0; aanvullen < 10; aanvullen++){
-        // extraCijfers = extraCijfers + aanvullen
-        // output.push(aanvullen.charAt(aanvullen))
+    for(let b = 0; b <10; b++){
+        if (output.length<10){
+            output.push(b)
+        }
     }
-    console.log(extraCijfers)
-
-    
 }
 
 if (output.length > 10 && output.length != 20){
     console.log(output);
     console.log("Lengte van de output:", output.length)
     console.log("Aanvullen tot er weer een tiental uitkomt.")
+
+    for(let b = 0; b <20; b++){
+        if (output.length<20){
+            output.push(b)
+        }
+    }
 }
 
+console.log(output)
 //------------------------------------------------------
 
 
