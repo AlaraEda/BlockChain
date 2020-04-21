@@ -4,6 +4,7 @@
   "description": "https://www.techiedelight.com/character-to-ascii-code-javascript/\r https://stackoverflow.com/questions/7784620/javascript-number-split-into-individual-digits\r https://www.w3schools.com/jsref/jsref_slice_array.asp\r https://www.quora.com/What-is-MOD-10-in-maths",
   "main": "index.js",
   "dependencies": {
+    "node-fetch": "^2.6.0",
     "requirejs": "^2.3.6"
   },
   "devDependencies": {},
