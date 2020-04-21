@@ -1,0 +1,23 @@
+{
+  "name": "blockchain",
+  "version": "1.0.0",
+  "description": "https://www.techiedelight.com/character-to-ascii-code-javascript/\r https://stackoverflow.com/questions/7784620/javascript-number-split-into-individual-digits\r https://www.w3schools.com/jsref/jsref_slice_array.asp\r https://www.quora.com/What-is-MOD-10-in-maths",
+  "main": "index.js",
+  "dependencies": {
+    "requirejs": "^2.3.6"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlaraEdda/BlockChain.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlaraEdda/BlockChain/issues"
+  },
+  "homepage": "https://github.com/AlaraEdda/BlockChain#readme"
+}

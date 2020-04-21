@@ -1,4 +1,6 @@
 
+const crypto = require('crypto');
+
 //My Code
 let string = "text";
 var theCode ="";
@@ -52,6 +54,24 @@ console.log("Dit is de orginele output: ", output)
         kolom2 = output.slice(10,20)
     }
 
+    //Werkt deze nog effe bij.
+    if (output.length > 20 && output.length != 30){
+        console.log("Lengte van de output:", output.length)
+        console.log("Aanvullen tot er weer een tiental uitkomt.")
+
+        for(let b = 0; b <30; b++){
+            if (output.length<30){
+                output.push(b)
+            }
+        }
+
+        //Splits de array in twee aparte kolommen!
+        kolom1 = output.slice(0,10)
+        kolom2 = output.slice(10,20)
+        kolom3 = output.slice(20,30)
+    }
+    
+
 console.log("Dit is de nieuwe gehele output:", output)
 console.log("Dit is kolom1: ",kolom1)
 console.log("Dit is kolom2: ",kolom2)
@@ -65,8 +85,9 @@ for (let cijfer = 0; cijfer<10; cijfer++){
     kolom3 = (kolom1[cijfer] + kolom2[cijfer]) % 10                             //Modules 10 word hier uitgevoerd.
     kolom3output.push(kolom3)
 }
+
 console.log("Dit is kolom3: ",kolom3output)
+console.log("Alles op een rij:", kolom3output.join(''));                        //Tekst naast elkaar.
 
-
-
-
+const hash = crypto.createHash('sha256').update(kolom3output.join('')).digest('hex');
+console.log(hash)
