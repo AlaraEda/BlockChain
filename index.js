@@ -2,10 +2,6 @@
 const fetch = require('node-fetch');            //Fetch functie voor node
 const crypto = require('crypto');
 
-//My Code
-
-
-
 //Functie haalt de laatst aangemaakte block op. 
 async function getLatestBlock(){
     let response = await fetch('https://programmeren9.cmgt.hr.nl:8000/api/blockchain/next')
@@ -110,7 +106,7 @@ async function newHash(string) {
 }
 
 
-async function Mod10(kolom1, kolom2, originalkolom, kolom3output = [], cijfer = 0){                                                             //Recursief?
+function Mod10(kolom1, kolom2, originalkolom, kolom3output = [], cijfer = 0){                                                             //Recursief?
     //Doe Kolom1 + kolom2, creeer zo kolom3!
     
     //console.log("Dit is de original kolom:", originalkolom.length)
@@ -127,7 +123,6 @@ async function Mod10(kolom1, kolom2, originalkolom, kolom3output = [], cijfer = 
 
     else {
         //return kolom3output en stuur het door makehashfunctie.
-        
         return makeHash(kolom3output)
     }
 }

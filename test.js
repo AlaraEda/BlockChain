@@ -1,10 +1,20 @@
-var assert = require('assert');
-let testF = require('./nonse.js');
-testF.createNewHash
-describe('createNewHash', () => {
-    it('gives the correct hash', () =>{
-        return testF.createNewHash('000078454c038871fa4d67b0022a30baaf35eaa231f8991b108e2624f052f3f8CMGTMiningCorporationBobPIKAB1154868951385815487477887161031'){
-            assert.equal(result, '')
-        })
-    })
-})
+async function Mod10(kolom1, kolom2, originalkolom, kolom3output = [], cijfer = 0){                                                             //Recursief?
+    //Doe Kolom1 + kolom2, creeer zo kolom3!
+    
+    //console.log("Dit is de original kolom:", originalkolom.length)
+    if (kolom3output.length <10){
+        kolom3output.push((kolom1[cijfer] + kolom2[cijfer]) % 10)                  //Modules 10 word hier uitgevoerd.
+        cijfer++
+
+        return Mod10(kolom1, kolom2, originalkolom, kolom3output, cijfer)
+    }
+
+    else if (originalkolom.length > 1){
+        return Mod10(kolom3output, originalkolom.splice(0,10), originalkolom)
+    }
+
+    else {
+        //return kolom3output en stuur het door makehashfunctie.
+        return makeHash(kolom3output)
+    }
+}

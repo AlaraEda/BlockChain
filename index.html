@@ -4,9 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="shortcut icon" type="image/png" href="./node_modules/jasmine-core/images/jasmine_favicon.png">
+    <link rel="stylesheet" type="text/css" href="./node_modules/jasmine-core/lib/jasmine-core/jasmine.css">
+
+    <script type="text/javascript" src="./node_modules/jasmine-core/lib/jasmine-core/jasmine.js"></script>
+    <script type="text/javascript" src="./node_modules/jasmine-core/lib/jasmine-core/jasmine-html.js"></script>
+    <script type="text/javascript" src="./node_modules/jasmine-core/lib/jasmine-core/boot.js"></script>
+
     <script src="index.js"></script>
-</head>
-<body>
-    
-</body>
+
+    <script>
+    describe("Mod10Calculate", function() {
+        it("Add two rows together to form one", function() {
+            // arrange - supposed outcome
+            let sum = [2, 4, 6, 8, 0, 2, 4, 6, 8, 0]
+
+            //act - what are we testing
+            let kolom1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
+            let kolom2 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
+
+            let originalkolom = kolom1 + kolom2
+            const result = Mod10(kolom1, kolom2, originalkolom);
+
+            console.log("Kolom3output? ", sum)
+            // assert
+            expect(result).toEqual(sum);
+            // expect(1).toEqual(1);
+            });
+        });
+
+        </script>
+    </head>
 </html>
